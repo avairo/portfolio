@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::selection {
+  color: unset;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ensure Press Start 2P font loads properly */
+@layer base {
+  .font-press-start {
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.75rem; /* Smaller size for pixel font */
+    line-height: 1.5;
+  }
+}
+
+@layer base {
+  .terminal-scrollbar::-webkit-scrollbar {
+    @apply w-[.75rem];
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-md border-[3px] border-solid border-transparent bg-kali-gray/[.2] bg-clip-content;
+  }
+}
